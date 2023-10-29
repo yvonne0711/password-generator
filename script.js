@@ -103,10 +103,16 @@ function getPasswordOptions() {
   //var options = confirm("At least lowercase")
 }
 
+getPasswordOptions();
+
 // Function for getting a random element from an array
 function getRandom(arr) {
   var randomSpecial = Math.floor(Math.random() * specialCharacters.length);
-  console.log(randomSpecial, specialCharacters[randomSpecial]);
+
+  console.log(specialCharacters[randomSpecial]);
+  console.log(numericCharacters[randomSpecial]);
+  console.log(lowerCasedCharacters[randomSpecial]);
+  console.log(upperCasedCharacters[randomSpecial]);
 }
 
 getRandom();
