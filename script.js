@@ -137,7 +137,10 @@ function generatePassword() {
   // create an empty password variable to later append characters in
   var password = "";
 
-
+  // for each character, randomly assign the characters and append them to the variable password 
+  for (var i = 0; i < length; i++) {
+    password += getRandom(allCharacters);
+  }
 
   return password;
 }
