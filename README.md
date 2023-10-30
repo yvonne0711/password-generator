@@ -13,27 +13,29 @@
 ## Overview
 
 ### The challenge
-This project is to recreate my own digital portfolio from the previous project in my front-end web development bootcamp, but using Bootstrap 5. It includes a navigation bar, which links to a section of an about me, my projects so far, the skills I expect from the bootcamp, and how to contact me as a footer, and hero section. Each project is displayed as a Bootstrap card and guides the user to proceed to navigate to the project's site. The main section of the portfolio uses the Bootstrap grid system, using the grid classes to rearrange the content in the built-in responsiveness.
+This proejct is to create an application that generates a random password based on the given conditions. It includes special characters, uppercase and lowercase, and numeric characters. It also has a condition for it to be 8 to 128 characters using JavaScript. The prompt for the user to enter the password length is answered before generating and displaying a random password.
 
 ### Mock-up
 
 The following image shows the web application's appearance and functionality:
 
-![My portfolio includes a heading with a navigation bar, a hero section which includes an image and a subtitle in one section, and a main section with an About Me, Projects and Skills, as well as Contact Me footer.](assets/images/mockup.png)
+![Password generator includes a box in the middle of the screen with a button to Generate a random password.](mock-up.png)
 
 ### Website
-Deployed application: https://yvonne0711.github.io/yvonnes-bootstrap-portfolio/ 
+Deployed application: https://yvonne0711.github.io/password-generator/ 
 
 ## My process
 
 ### Built with
 - HTML
 - CSS
+- JavaScript
 
 ### What I learnt
-- Was initially confused at using Bootstrap 5 with my own classes and where I would add classes to style and position elements
-- Got more comfortable with using Bootstrap and making custom classes for my own styling and positioning
-- Was more efficient to use [Bootstrap's](https://getbootstrap.com/docs/5.3/getting-started/introduction/) components and utilities, with the help of Google, Stack Overflow and W3Schools(https://www.w3schools.com/css/) 🤭
-- Learnt that I could use Bootstrap's built-in classes to add in Bootstrap's given components
-- Learnt that I could use a row within a row in Bootstrap's [grid system](https://getbootstrap.com/docs/4.0/layout/grid/) for displaying cards in the projects section
-- Surprisingly quite a difficult project considering most code is from Bootstrap, but definitely progressing in HTML and CSS
+- Functions throughoug the whole file
+- Prompting the user for password length but didn't manage to figure out how to give more options incorporated into the rest of the code
+- Used the property `Math.floor` and `Math.random`
+- Merged the characters together using the method [`.concat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+- Used a [`for` loop](https://www.w3schools.com/js/js_loop_for.asp) to iterate through each password character
+- Given code for functionality of generating a password on-click of a button
+- A difficult challenge using JavaScript with many functions needed
