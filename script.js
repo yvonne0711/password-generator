@@ -113,7 +113,7 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-  // get a random number 
+  // get a random number and assigning it to a variable
   var randomSpecial = Math.floor(Math.random() * arr.length);
   return arr[randomSpecial];
   // console.log(specialCharacters[randomSpecial]);
@@ -126,20 +126,21 @@ function getRandom(arr) {
 // Function to generate password with user input
 function generatePassword() {
 
+  // if the lenght of the password is not the same as the length inputted by the user, let's give them an error message, booleans can work on variables but not functions
   var length = getPasswordOptions();
   if (length==false) {
       return "Not possible to generate a password!";
   }
 
-  // all characters merged together in one string
-  var allCharacters = specialCharacters.concat(numericCharacters).concat(lowerCasedCharacters).concat(upperCasedCharacters);
+  // all of the characters merged together in one string
+  var charactersMerged = specialCharacters.concat(numericCharacters).concat(lowerCasedCharacters).concat(upperCasedCharacters);
 
   // create an empty password variable to later append characters in
   var password = "";
 
   // for each character, randomly assign the characters and append them to the variable password 
   for (var i = 0; i < length; i++) {
-    password += getRandom(allCharacters);
+    password += getRandom(charactersMerged);
   }
 
   return password;
@@ -157,5 +158,6 @@ function writePassword() {
 }
 
 // Add event listener to generate button
+// on click, lets generate the password
 generateBtn.addEventListener('click', writePassword);
 
