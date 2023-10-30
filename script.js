@@ -90,36 +90,56 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+  // prompt the user to input how many characters they want their password to be
   var passwordLength = prompt("How long will you want your password to be? Choose from 8-128. ");
 
+  // if the password is not from 8 to 128 characters, alert the user
   if (passwordLength < 8 || passwordLength > 128) {
     alert("Enter a password between 8-128 characters.");
     return null;
   }
   else {
+    // var includeSpecials = confirm("Want special characters?");
+    // var includeNumbers = confirm("Want numbers in it?");
+    // var includeLowercase = confirm("Want small letters?");
+    // var includeUppercase = confirm("What about big letters?");
     return passwordLength;
   }
 
-  //var options = confirm("At least lowercase")
+
 }
 
-getPasswordOptions();
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-  var randomSpecial = Math.floor(Math.random() * specialCharacters.length);
-
-  console.log(specialCharacters[randomSpecial]);
-  console.log(numericCharacters[randomSpecial]);
-  console.log(lowerCasedCharacters[randomSpecial]);
-  console.log(upperCasedCharacters[randomSpecial]);
+  // get a random number 
+  var randomSpecial = Math.floor(Math.random() * arr.length);
+  return arr[randomSpecial];
+  // console.log(specialCharacters[randomSpecial]);
+  // console.log(numericCharacters[randomSpecial]);
+  // console.log(lowerCasedCharacters[randomSpecial]);
+  // console.log(upperCasedCharacters[randomSpecial]);
 }
 
-getRandom();
 
 // Function to generate password with user input
 function generatePassword() {
 
+  var length = getPasswordOptions();
+  if (length==false) {
+      return "Not possible to generate a password!";
+  }
+
+  // all characters merged together in one string
+  var allCharacters = specialCharacters.concat(numericCharacters).concat(lowerCasedCharacters).concat(upperCasedCharacters);
+
+  // create an empty password variable to later append characters in
+  var password = "";
+
+
+
+  return password;
 }
 
 // Get references to the #generate element
